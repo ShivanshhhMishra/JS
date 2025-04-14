@@ -1,0 +1,4 @@
+1.Create an html page with a button. When the button is clicked, change the text
+of a paragraph element.
+
+2.Create a page with two image and a  buttton. When the button is clicked,swap the sourcce aattribbute of the image.
