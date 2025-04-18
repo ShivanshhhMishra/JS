@@ -10,3 +10,5 @@ of a paragraph element.
 5.Build a countdown timer that starts when a button is clicked and updated the display in real-time.
 
 6. Create a tabbed interface where clicking on tabs displays different content section without reload.
+
+7. Display a progress bar that updates in real-time, showing the progress of task, download, or form submission.
