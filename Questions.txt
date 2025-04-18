@@ -12,3 +12,5 @@ of a paragraph element.
 6. Create a tabbed interface where clicking on tabs displays different content section without reload.
 
 7. Display a progress bar that updates in real-time, showing the progress of task, download, or form submission.
+
+8. Create a search bar that display live search results as users type, updating the results without requiring a full reload.
