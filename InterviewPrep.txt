@@ -1,0 +1,262 @@
+1. What is eventDelegation in JavaScript?
+
+EventDelegation ek tarika hota hai events ko handle krne ka, taki apko kayi sare listeners na banane pade. Kayi sare events ko handle kr ske same time pe.
+
+
+
+2. Explain the difference between null and undefined in JavaScript?
+
+null and undefined both are values.
+
+null:
+
+typeof null is object
+
+If nothing is found and it returns null.
+
+undefined:
+
+typeof undefined is undefined
+
+If you don't give a value to a variable, then in that case it returns undefined
+
+
+
+
+3. What is the purpose of closure?
+
+Ek function jo ek aur function ko return krega. When you use/access the parent variable in the return function, that is called closure.
+
+
+
+4. What is prototype inheritance?
+
+Inheritance: Aap apne parent se kuch inherit kr rhe ho (apko mil rha hai kuch apne parent se)
+
+JavaScript mein inherit krne k liye ek he tarika hai — prototype inheritance. Ab ye kaise hota hai:
+
+Aap ek function bnaate ho usmein this ka use krte ho, aur jb function ko call krte ho to new ka use krte ho — use function call hota hai as a constructor function (new ki help se)
+
+new laga diya mtlb blank Object, ab jha jha this laga diya wha blank object aa gaya.
+
+Constructor function gives all the values jo uss new mein likhi thi.
+
+
+
+
+5. Difference between synchronous and asynchronous?
+
+Synchronous: It waits for each task, blocks the next line, slower if tasks take time.
+
+Asynchronous: Doesn't wait, moves ahead, lets other tasks run, faster for long operations.
+
+Synchronous code main stack pe chlta hai aur asynchronous code side stack mein.
+
+
+
+6. Concept of Hoisting?
+
+Other languages mein agar aap var se kuch declare krte ho baad mein aur print kra dete ho pehle line pe aur declare krte ho baad mein to wo error deta hai.
+
+But in JavaScript, hoisting concept hota hai — like agar aap console.log pehle kr dete ho aur var ko declare baad mein krte ho to wo recognize krega. Is concept ko hoisting khete hain.
+
+Aisa isliye hota hai kyunki JavaScript ka interpreter 2 bar chlta hai:
+
+Pheli bar: Variable aur function declarations ko memory mein note kr leta hai aur unko ek default value de deta hai — undefined
+
+Dusri bar: Actually code ko execute krta hai.
+
+Note: Ye sirf var k case mein hota hai, let aur const k case mein nahi hota.
+
+
+
+
+7. What are the different ways to create an object?
+
+Mainly 5 ways:
+
+Object literal — {}
+
+new Object()
+
+Object.create({})
+
+Using constructor function
+
+Using class
+
+
+
+8. What is the use of "this" keyword in JavaScript?
+
+this keyword JS mein one of the most suspenseful keyword hai.
+
+Keywords ka matlab hota hai — aisa word jiska koi meaning ho programming lang. mein
+
+this ki value bar bar badal skti hai alag alag conditions mein. Sari conditions ko seekh jao to this ko smjh jaaoge.
+
+THIS (Where we use this):
+
+Global - window
+
+Function - window
+
+Method - object
+
+Function inside method (ES5) - window
+
+Function inside method (ES6 - arrow function) - object
+
+Constructor function - this ki value = new blank object
+
+Event listener - this ki value = that element jispar event listener laga ho
+
+
+
+
+9. What are Promises and how is it different from callback?
+
+Promises and callback ka purpose same hai — that is, asynchronous operations ko handle krna.
+(Asynchronous = code ko time lagega, kitna lagega hume nahi pata)
+
+To aap khete ho: "jb bhi complete ho jaye to ye kr dena" — to ye kr dena isi ko kehte hain callback.
+
+Promises: Koi bhi asynchronous code hai aap promises mein likh do. Iski 2 main states hoti hain:
+
+Jab tak ye promise chl rha hota hai = pending
+
+Yaha se 2 states banti hain:
+
+Complete hoga successfully → .then()
+
+Complete hoga with error → .catch()
+
+
+
+
+10. Explain the concept of eventLoop in JS, how it helps in asynchronous JS?
+
+Jab aap code likhte ho to 2 stack pe chlta hai:
+
+Main stack
+
+Side stack (callback queue)
+
+Jab main stack empty hota hai to event loop check krta hai — agar empty hai to side stack ki cheeze main stack mein laata hai (execution ke liye).
+
+
+
+
+11. What are the strategies to improve the performance of JavaScript?
+
+Esa code likho ki repeat na ho. Copy-paste na ho. You can write once and then call that code wherever you want to.
+
+Zyada se zyada use kro function ko chizo ko define krne k liye.
+
+Jaha lagta hai asynchronous code hai, waha callback, promise, async-await ka use kro.
+
+
+
+
+12. What are the differences between let, const, and var in JavaScript?
+
+var: Purana tarika hai variable declare krne ka. Also abhi bhi use hota hai. (Hoisting hoti hai, aur baaki dono mein nahi)
+
+let: Naya tarika hai variable declare krne ka. (Block scoped)
+
+const: Constant banane ka tarika (Value change nahi hoti)
+
+
+
+13. What is the difference between == and === in JavaScript?
+
+== (double equal): Equality operator — it checks values but not datatype
+
+
+=== (triple equal): Strict equality operator — it checks value + datatype
+
+
+
+
+14. Handling Error in JavaScript?
+
+Just like other languages — by using try and catch.
+
+js
+Copy
+Edit
+try {
+  // code
+} catch (error) {
+  // handle error
+}
+
+
+
+
+15. What is the difference between call, apply, and bind?
+
+Teeno cheeze use hoti hain ek hi purpose k liye — function ko call krte waqt this ki value define krna.
+
+By default function ki value hoti hai window. Aap direct variable ka name likh ke:
+
+js
+Copy
+Edit
+abc.call("anything")
+To ye value this ko assign ho jayegi.
+
+call() — pass arguments comma separated
+
+apply() — pass arguments as array
+
+bind() — function ko bind krte ho with this, value set krte ho, return kr deta hai function ko — baad mein use kr skte ho.
+
+
+
+
+16. What is the difference between map, reduce, and filter in JavaScript?
+
+map: Nayi array bna rha hota hai modified values ke sath.
+
+filter: Apne hisab se filter kr skte ho — jo chahiye wo le lo, baaki hata do.
+
+
+reduce: Puri array ko convert kr deta hai single value mein.
+
+
+
+
+17. Explain the concept of event bubbling in DOM?
+
+In case apne click krne pe event listener nahi lagaya hai to wo parent pe chala jata hai. Use kehte hain bubbling, then parent pe check krta hai event listener ko. Ye eventDelegation mein kaam krta hai.
+
+
+
+
+18. What is callback function, what are the use cases of this?
+
+Asynchronous code jab chl k khtm hota hai, then uske khtm hone pe kuch kro — that is callback function.
+
+Aap callback function mein jo bhi likhoge wo tab chalega jab asynchronous code khtm hoga.
+
+
+
+
+19. What are the differences in regular function and arrow function in JavaScript?
+
+Regular Function:
+
+Has its own this
+
+Can be used as constructor
+
+arguments object is available
+
+Arrow Function:
+
+Doesn't have its own this, it uses lexical this (parent ka this)
+
+Cannot be used as constructor
+
+No arguments object
