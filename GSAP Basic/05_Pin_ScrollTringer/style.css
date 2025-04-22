@@ -23,6 +23,15 @@ body {
   background-color: rgb(40, 186, 208);
 }
 
+#page2 img {
+  height: 100%;
+  width: 20%;
+  object-fit: cover;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 #page3 {
   height: 100%;
   width: 100%;
