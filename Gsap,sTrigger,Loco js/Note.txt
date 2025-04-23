@@ -1,0 +1,15 @@
+Order of link pasting
+
+Locomotive
+gsap
+scrollTrigger
+script.js
+
+
+
+links
+1. Locomotive cdn
+2. Locomotive cd  github
+3.gsap cdn
+
+5.Locomotive scrolltrigger codepen
